@@ -1,6 +1,6 @@
 {
   "name": "leaflet-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Leaflet.js component for usage with fastn.js",
   "main": "index.js",
   "directories": {
