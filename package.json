@@ -1,0 +1,36 @@
+{
+  "name": "leaflet-component",
+  "version": "1.0.0",
+  "description": "Leaflet.js component for usage with fastn.js",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example:js": "watchify example/index.js -o example/index.browser.js -d -v",
+    "eg": "npm-run-all example:*"
+  },
+  "dependencies": {
+    "crel": "^2.1.8",
+    "defaultcss": "^1.1.1",
+    "doc-js": "^1.3.1",
+    "fastn": "^2.5.0",
+    "laidout": "^1.1.0",
+    "leaflet": "^0.7.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shotlom/leaflet-component.git"
+  },
+  "keywords": [
+    "leaflet",
+    "fastn"
+  ],
+  "author": "Sholto maud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shotlom/leaflet-component/issues"
+  },
+  "homepage": "https://github.com/shotlom/leaflet-component#readme"
+}
