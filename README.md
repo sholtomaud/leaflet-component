@@ -1,3 +1,3 @@
 # leaflet-component
 
-A leaflet component for fastn
+> [example](http://requirebin.com/?gist=bafa2344b99fad117451)
