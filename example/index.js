@@ -12,23 +12,23 @@ const fastn = require('fastn')({
 let markerModel = new fastn.Model({
   markers : [
     {
-      gis_lat:-35.2834600	,
-      gis_lng: 149.9,
+      latitude:-35.2834600	,
+      longitude: 149.9,
       title: 'Hello fastn 1'
     },
     {
-      gis_lat:-35.5	,
-      gis_lng: 144.12,
+      latitude:-35.5	,
+      longitude: 144.12,
       title: 'Hello fastn 2'
     },
     {
-      gis_lat:-35.1	,
-      gis_lng: 149.125,
+      latitude:-35.1	,
+      longitude: 149.125,
       title: 'Hello fastn 3'
     },
     {
-      gis_lat:-35.9	,
-      gis_lng: 149.131,
+      latitude:-35.9	,
+      longitude: 149.131,
       title: 'Hello fastn 4'
     }
 ]
@@ -38,9 +38,9 @@ const ui = fastn('div', {class:'map'},
   fastn('list:leaflet',{
     items: fastn.binding('markers').attach(markerModel),
     template: function(){
-        return fastn('base:marker', {
-            gis_lat: fastn.binding('gis_lat'),
-            gis_lng: fastn.binding('gis_lng'),
+        return fastn('marker', {
+            latitude: fastn.binding('latitude'),
+            longitude: fastn.binding('longitude'),
             title: fastn.binding('title')
         }).binding('item')
     }

@@ -7,10 +7,8 @@ module.exports = function(fastn, component, type, settings, children) {
     component.render = function(){
         L.Icon.Default.imagePath = 'markers';
 
-        component.element = L.marker([
-            component.gis_lat(),
-            component.gis_lng()
-        ], {
+        component.element = L.marker([ component.latitude(), component.longitude() ],
+        {
             clickable: true,
             title: component.title()
         });
@@ -24,11 +22,7 @@ module.exports = function(fastn, component, type, settings, children) {
         if(!component.element){
             return;
         }
-
-        component.element.setLatLng([
-            component.gis_lat(),
-            component.gis_lng()
-        ]);
+        component.element.setLatLng([ component.latitude(), component.longitude() ])
     }
 
     function updateTitle(){
@@ -62,11 +56,11 @@ module.exports = function(fastn, component, type, settings, children) {
     }
 
     fastn.property(0, 'value')
-        .addTo(component, 'gis_lat')
+        .addTo(component, 'latitude')
         .on('change', updatePosition);
 
     fastn.property(0, 'value')
-        .addTo(component, 'gis_lng')
+        .addTo(component, 'longitude')
         .on('change', updatePosition);
 
     fastn.property(0, 'value')
